@@ -12,7 +12,8 @@
         "postinstall": "nuxt prepare",
         "cleanup": "pnpm dlx nuxi cleanup",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "commit": "cz"
     },
     "dependencies": {
         "nuxt": "^3.16.1",
