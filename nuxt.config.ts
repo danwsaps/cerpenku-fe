@@ -3,9 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
 
-    modules: [
-        '@nuxt/eslint',
-    ],
+    modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
 
     eslint: {
         config: {
@@ -21,5 +19,13 @@ export default defineNuxtConfig({
 
     devServer: {
         port: Number.parseInt(import.meta.env.NUXT_DEVELOPMENT_PORT ?? '8000', 10),
+    },
+
+    i18n: {
+        vueI18n: './i18n.config.ts',
+        locales: [
+            { code: 'id', language: 'id-ID' },
+            { code: 'en', language: 'en-US' },
+        ],
     },
 });
