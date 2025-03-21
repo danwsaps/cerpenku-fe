@@ -41,3 +41,15 @@ Locally preview production build:
 ```bash
 pnpm preview
 ```
+
+## Versioning
+
+### Committing Changes
+
+To ensure consistency in commits, use the following command:
+
+```bash
+pnpm commit
+```
+
+This will guide you through a structured commit message following Conventional Commits.
