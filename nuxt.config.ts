@@ -3,7 +3,11 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
 
-    modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
+    modules: [
+        '@nuxt/eslint',
+        '@nuxtjs/i18n',
+        '@nuxt/fonts',
+    ],
 
     eslint: {
         config: {
@@ -26,6 +30,14 @@ export default defineNuxtConfig({
         locales: [
             { code: 'id', language: 'id-ID' },
             { code: 'en', language: 'en-US' },
+        ],
+    },
+
+    fonts: {
+        families: [
+            { name: 'Inter', provider: 'google' },
+            { name: 'Libre Baskerville', provider: 'google' },
+            { name: 'Lato', provider: 'google' },
         ],
     },
 });
