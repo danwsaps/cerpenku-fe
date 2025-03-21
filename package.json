@@ -13,7 +13,9 @@
         "cleanup": "pnpm dlx nuxi cleanup",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "commit": "cz"
+        "commit": "cz",
+        "prepare": "husky",
+        "typecheck": "pnpm dlx nuxi typecheck"
     },
     "dependencies": {
         "nuxt": "^3.16.1",
@@ -30,7 +32,12 @@
         "commitlint-config-cz": "^0.13.3",
         "eslint": "^9.22.0",
         "eslint-plugin-format": "^1.0.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.5.0",
         "typescript": "^5.8.2",
         "vue-tsc": "^2.2.8"
+    },
+    "lint-staged": {
+        "*": "eslint --fix"
     }
 }
