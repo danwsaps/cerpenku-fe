@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         'dayjs-nuxt',
         '@formkit/auto-animate/nuxt',
         '@nuxtjs/color-mode',
+        '@hebilicious/vue-query-nuxt',
     ],
 
     eslint: {
