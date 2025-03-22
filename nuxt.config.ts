@@ -13,6 +13,7 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         'dayjs-nuxt',
         '@formkit/auto-animate/nuxt',
+        '@nuxtjs/color-mode',
     ],
 
     eslint: {
