@@ -15,6 +15,8 @@ export default defineNuxtConfig({
         '@formkit/auto-animate/nuxt',
         '@nuxtjs/color-mode',
         '@hebilicious/vue-query-nuxt',
+        '@pinia/nuxt',
+        'pinia-plugin-persistedstate/nuxt',
     ],
 
     eslint: {
