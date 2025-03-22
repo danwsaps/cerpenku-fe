@@ -5,8 +5,9 @@ export default defineNuxtConfig({
 
     modules: [
         '@nuxt/eslint',
-        '@nuxtjs/i18n',
         '@nuxt/fonts',
+        '@nuxt/image',
+        '@nuxtjs/i18n',
         '@vueuse/nuxt',
         'dayjs-nuxt',
     ],
@@ -51,5 +52,31 @@ export default defineNuxtConfig({
         plugins: ['relativeTime', 'utc', 'timezone'],
         defaultLocale: 'id',
         defaultTimezone: 'Asia/Jakarta',
+    },
+
+    image: {
+        presets: {
+            avatar: {
+                modifiers: {
+                    format: 'webp',
+                    width: 50,
+                    height: 50,
+                    fit: 'cover',
+                    quality: 50,
+                },
+            },
+        },
+        quality: 80,
+        format: ['webp'],
+        screens: {
+            'xs': 320,
+            'sm': 640,
+            'md': 768,
+            'lg': 1024,
+            'xl': 1280,
+            'xxl': 1536,
+            '2xl': 1536,
+        },
+        densities: [1, 2],
     },
 });
