@@ -102,6 +102,7 @@
         "nuxi",
         "nuxtjs",
         "Selamat",
-        "versionrc"
+        "versionrc",
+        "vueuse"
     ]
 }

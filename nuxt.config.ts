@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
         '@nuxtjs/i18n',
         '@nuxt/fonts',
+        '@vueuse/nuxt',
     ],
 
     eslint: {
@@ -26,6 +27,9 @@ export default defineNuxtConfig({
     },
 
     i18n: {
+        bundle: {
+            optimizeTranslationDirective: false,
+        },
         vueI18n: './i18n.config.ts',
         locales: [
             { code: 'id', language: 'id-ID' },
