@@ -18,6 +18,7 @@
         "typecheck": "pnpm dlx nuxi typecheck"
     },
     "dependencies": {
+        "@formkit/auto-animate": "^0.8.2",
         "nuxt": "^3.16.1",
         "vue": "^3.5.13",
         "vue-router": "^4.5.0"
@@ -26,18 +27,31 @@
         "@antfu/eslint-config": "^4.10.2",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
+        "@hebilicious/vue-query-nuxt": "^0.3.0",
         "@nuxt/eslint": "^1.2.0",
         "@nuxt/fonts": "^0.11.0",
+        "@nuxt/icon": "^1.11.0",
+        "@nuxt/image": "^1.10.0",
+        "@nuxtjs/color-mode": "^3.5.2",
         "@nuxtjs/i18n": "^9.3.3",
+        "@tanstack/vue-query": "^5.69.0",
+        "@vueuse/core": "^13.0.0",
+        "@vueuse/nuxt": "^13.0.0",
         "commitizen": "^4.3.1",
         "commitlint": "^19.8.0",
         "commitlint-config-cz": "^0.13.3",
+        "dayjs": "^1.11.13",
+        "dayjs-nuxt": "^2.1.11",
         "eslint": "^9.22.0",
         "eslint-plugin-format": "^1.0.1",
         "husky": "^9.1.7",
         "lint-staged": "^15.5.0",
+        "nuxt-typed-router": "^3.8.0",
+        "sass-embedded": "^1.86.0",
         "typescript": "^5.8.2",
-        "vue-tsc": "^2.2.8"
+        "uuid": "^11.1.0",
+        "vue-tsc": "^2.2.8",
+        "yup": "^1.6.1"
     },
     "lint-staged": {
         "*": "eslint --fix"

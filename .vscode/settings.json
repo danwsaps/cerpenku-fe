@@ -98,10 +98,15 @@
         "commitlint",
         "czrc",
         "danwsaps",
+        "formkit",
+        "hebilicious",
         "Lato",
+        "lucide",
         "nuxi",
         "nuxtjs",
         "Selamat",
-        "versionrc"
+        "uuidv",
+        "versionrc",
+        "vueuse"
     ]
 }
