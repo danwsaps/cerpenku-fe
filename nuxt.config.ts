@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/icon',
         '@nuxtjs/i18n',
+        'nuxt-typed-router',
         '@vueuse/nuxt',
         'dayjs-nuxt',
     ],
@@ -30,10 +31,11 @@ export default defineNuxtConfig({
     },
 
     i18n: {
+        vueI18n: './i18n.config.ts',
+        defaultLocale: 'id',
         bundle: {
             optimizeTranslationDirective: false,
         },
-        vueI18n: './i18n.config.ts',
         locales: [
             { code: 'id', language: 'id-ID' },
             { code: 'en', language: 'en-US' },
@@ -92,5 +94,9 @@ export default defineNuxtConfig({
                 dir: './assets/icons',
             },
         ],
+    },
+
+    nuxtTypedRouter: {
+        strict: true,
     },
 });
