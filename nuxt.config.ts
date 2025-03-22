@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
         '@nuxt/fonts',
         '@nuxt/image',
+        '@nuxt/icon',
         '@nuxtjs/i18n',
         '@vueuse/nuxt',
         'dayjs-nuxt',
@@ -78,5 +79,18 @@ export default defineNuxtConfig({
             '2xl': 1536,
         },
         densities: [1, 2],
+    },
+
+    icon: {
+        size: '24px',
+        class: 'icon',
+        mode: 'css',
+        componentName: 'NuxtIcon',
+        customCollections: [
+            {
+                prefix: 'app',
+                dir: './assets/icons',
+            },
+        ],
     },
 });
