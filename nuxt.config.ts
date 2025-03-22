@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@nuxt/fonts',
         '@vueuse/nuxt',
+        'dayjs-nuxt',
     ],
 
     eslint: {
@@ -43,5 +44,12 @@ export default defineNuxtConfig({
             { name: 'Libre Baskerville', provider: 'google' },
             { name: 'Lato', provider: 'google' },
         ],
+    },
+
+    dayjs: {
+        locales: ['id', 'en'],
+        plugins: ['relativeTime', 'utc', 'timezone'],
+        defaultLocale: 'id',
+        defaultTimezone: 'Asia/Jakarta',
     },
 });

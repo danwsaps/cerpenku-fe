@@ -51,6 +51,12 @@ importers:
       commitlint-config-cz:
         specifier: ^0.13.3
         version: 0.13.3
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
+      dayjs-nuxt:
+        specifier: ^2.1.11
+        version: 2.1.11(magicast@0.3.5)
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -2082,6 +2088,12 @@ packages:
   dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
+
+  dayjs-nuxt@2.1.11:
+    resolution: {integrity: sha512-KDDNiET7KAKf6yzL3RaPWq5aV7ql9QTt5fIDYv+4eOegDmnEQGjwkKYADDystsKtPjt7QZerpVbhC96o3BIyqQ==}
+
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
 
   db0@0.3.1:
     resolution: {integrity: sha512-3RogPLE2LLq6t4YiFCREyl572aBjkfMvfwPyN51df00TbPbryL3XqBYuJ/j6mgPssPK8AKfYdLxizaO5UG10sA==}
@@ -7329,6 +7341,15 @@ snapshots:
       - typescript
 
   dargs@8.1.0: {}
+
+  dayjs-nuxt@2.1.11(magicast@0.3.5):
+    dependencies:
+      '@nuxt/kit': 3.16.1(magicast@0.3.5)
+      dayjs: 1.11.13
+    transitivePeerDependencies:
+      - magicast
+
+  dayjs@1.11.13: {}
 
   db0@0.3.1: {}
 
