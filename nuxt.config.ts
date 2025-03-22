@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         'nuxt-typed-router',
         '@vueuse/nuxt',
         'dayjs-nuxt',
+        '@formkit/auto-animate/nuxt',
     ],
 
     eslint: {
