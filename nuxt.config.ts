@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         'pinia-plugin-persistedstate/nuxt',
         '@nuxtjs/tailwindcss',
+        'shadcn-nuxt',
     ],
 
     eslint: {
@@ -85,7 +86,6 @@ export default defineNuxtConfig({
     },
 
     icon: {
-        size: '24px',
         class: 'icon',
         mode: 'css',
         componentName: 'NuxtIcon',
@@ -102,5 +102,18 @@ export default defineNuxtConfig({
         configPath: 'tailwind.config',
         exposeConfig: false,
         viewer: true,
+    },
+
+    components: [
+        {
+            path: '~/components',
+            pathPrefix: false,
+            extensions: ['vue'],
+        },
+    ],
+
+    shadcn: {
+        prefix: 'V',
+        componentDir: '~/components/base',
     },
 });

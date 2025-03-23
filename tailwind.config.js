@@ -2,7 +2,7 @@
 
 export default {
     content: [],
-    darkMode: 'class',
+    darkMode: ['class'],
     theme: {
         container: {
             center: true,
@@ -141,6 +141,11 @@ export default {
             },
             boxShadow: {
                 smooth: '0px 5px 40px rgba(10, 10, 10, 0.1)',
+            },
+            borderRadius: {
+                lg: 'var(--radius)',
+                md: 'calc(var(--radius) - 2px)',
+                sm: 'calc(var(--radius) - 4px)',
             },
         },
     },
