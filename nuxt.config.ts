@@ -9,7 +9,6 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/icon',
         '@nuxtjs/i18n',
-        'nuxt-typed-router',
         '@vueuse/nuxt',
         'dayjs-nuxt',
         '@formkit/auto-animate/nuxt',
@@ -96,10 +95,6 @@ export default defineNuxtConfig({
                 dir: './assets/icons',
             },
         ],
-    },
-
-    nuxtTypedRouter: {
-        strict: true,
     },
 
     tailwindcss: {
