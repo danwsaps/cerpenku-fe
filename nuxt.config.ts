@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         '@hebilicious/vue-query-nuxt',
         '@pinia/nuxt',
         'pinia-plugin-persistedstate/nuxt',
+        '@nuxtjs/tailwindcss',
     ],
 
     eslint: {
@@ -41,10 +42,6 @@ export default defineNuxtConfig({
         bundle: {
             optimizeTranslationDirective: false,
         },
-        locales: [
-            { code: 'id', language: 'id-ID' },
-            { code: 'en', language: 'en-US' },
-        ],
     },
 
     fonts: {
@@ -103,5 +100,12 @@ export default defineNuxtConfig({
 
     nuxtTypedRouter: {
         strict: true,
+    },
+
+    tailwindcss: {
+        cssPath: '~/styles/main.scss',
+        configPath: 'tailwind.config',
+        exposeConfig: false,
+        viewer: true,
     },
 });
