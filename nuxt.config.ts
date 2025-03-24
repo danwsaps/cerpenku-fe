@@ -18,6 +18,7 @@ export default defineNuxtConfig({
         'pinia-plugin-persistedstate/nuxt',
         '@nuxtjs/tailwindcss',
         'shadcn-nuxt',
+        'motion-v/nuxt',
     ],
 
     eslint: {
