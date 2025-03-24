@@ -19,6 +19,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'shadcn-nuxt',
         'motion-v/nuxt',
+        '@vee-validate/nuxt',
     ],
 
     eslint: {
@@ -116,5 +117,15 @@ export default defineNuxtConfig({
     shadcn: {
         prefix: 'V',
         componentDir: '~/components/base',
+    },
+
+    veeValidate: {
+        autoImports: true,
+        componentNames: {
+            Form: 'VLibFormForm',
+            Field: 'VLibFormField',
+            FieldArray: 'VLibFormFieldArray',
+            ErrorMessage: 'VLibFormErrorMessage',
+        },
     },
 });

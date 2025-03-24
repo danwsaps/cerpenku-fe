@@ -19,6 +19,8 @@
     },
     "dependencies": {
         "@formkit/auto-animate": "^0.8.2",
+        "@vee-validate/nuxt": "^4.15.0",
+        "@vee-validate/yup": "^4.15.0",
         "motion-v": "^0.13.1",
         "nuxt": "^3.16.1",
         "reka-ui": "^2.1.1",
