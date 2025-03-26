@@ -1,5 +1,7 @@
 <template>
-    <p>Cerpenku FE</p>
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 
     <ClientOnly>
         <VToast />
