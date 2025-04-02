@@ -27,8 +27,8 @@ export const truncateString = ({
     ellipsisText = '...',
 }: {
     text: string;
-    maxLength: number;
-    ellipsisText: string;
+    maxLength?: number;
+    ellipsisText?: string;
 }) => text.length > maxLength
     ? `${text.slice(0, maxLength)}${ellipsisText}`
     : text;

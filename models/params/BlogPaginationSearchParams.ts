@@ -1,7 +1,3 @@
-import type { ContentStatus, Undefined } from '~/types';
-import { CONTENT_STATUS } from '~/constants';
-import { PaginationSearchParam } from './PaginationSearchParam';
-
 export class BlogPaginationSearchParams extends PaginationSearchParam {
     title!: Undefined<string>;
     status!: ContentStatus[];

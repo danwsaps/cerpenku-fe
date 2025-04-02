@@ -1,5 +1,3 @@
-import type { Undefined } from '~/types';
-
 export const ENDPOINT_PATH = import.meta.env.API_BASE_PATH;
 export const ENDPOINT_VERSION = `v1`;
 

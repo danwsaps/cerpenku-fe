@@ -1,5 +1,3 @@
-import type { Breadcrumb } from '~/types';
-
 export class BreadcrumbBuilder {
     private breadcrumbList: Breadcrumb[] = [];
 
