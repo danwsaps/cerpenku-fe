@@ -1,21 +1,33 @@
-<script lang="ts" setup>
-import type { LabelProps } from 'reka-ui';
+<script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
-import { useFormField } from './useFormField';
 
-const props = defineProps<LabelProps & { class?: HTMLAttributes['class'] }>();
+type Props = {
+    class?: HTMLAttributes['class'];
+    label?: string;
+    labelFor?: string;
+    labelClass?: HTMLAttributes['class'];
+    required?: boolean;
+};
 
-const { error, formItemId } = useFormField();
+const props = defineProps<Props>();
 </script>
 
 <template>
-    <VLabel
-        :class="cn(
-            error && 'text-red-500 dark:text-red-900',
-            props.class,
-        )"
-        :for="formItemId"
-    >
-        <slot />
-    </VLabel>
+    <div :class="cn('flex items-center justify-between', props.class)">
+        <label
+            v-if="$slots.label || label"
+            :for="labelFor"
+            :class="cn('flex-1 leading-none font-bold text-muted-800 dark:text-muted-100', props.labelClass)"
+        >
+            <slot name="label">
+                {{ label }}
+                <span
+                    v-if="required"
+                    :class="cn(required && 'text-danger-600 dark:text-danger-300')"
+                >
+                    *
+                </span>
+            </slot>
+        </label>
+    </div>
 </template>

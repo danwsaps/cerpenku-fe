@@ -7,7 +7,7 @@ export type Nullable<Type> = Type | null;
 export type Undefined<Type> = Type | undefined;
 
 export type GenericPagination<T> = {
-    data: T;
+    data: T[];
     elements: number;
     pages: number;
 };

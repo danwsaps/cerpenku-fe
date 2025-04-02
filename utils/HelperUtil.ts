@@ -6,7 +6,7 @@ import {
 /**
  * @description Checks if the given value is an array.
  */
-export const isArray = <T>(value?: T[]): value is T[] => Array.isArray(value);
+export const isArray = <T>(value?: T | T[]): value is T[] => Array.isArray(value);
 
 /**
  * @description Checks if the given value is an array and has elements.
@@ -102,3 +102,17 @@ export const UUIDV4 = () => v4();
  * @description Generate UUID V7
  */
 export const UUIDV7 = () => v7();
+
+/**
+ * @description Maps a paginated response of type T to type U using the provided mapper function.
+ */
+export const genericPaginationDtoMapper = <T, U>(
+    response: GenericPagination<T>,
+    mapper: (item: T) => U,
+): GenericPagination<U> => {
+    return {
+        data: response.data.map(mapper),
+        elements: response.elements,
+        pages: response.pages,
+    };
+};

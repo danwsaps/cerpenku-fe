@@ -1,22 +1,61 @@
 <script setup lang="ts">
-import type { TooltipRootEmits, TooltipRootProps } from 'reka-ui';
-import { TooltipRoot, useForwardPropsEmits } from 'reka-ui';
+import type {
+    TooltipContentProps,
+    TooltipTriggerProps,
+} from 'reka-ui';
+import type { HTMLAttributes } from 'vue';
+import type { TooltipContentVariants } from '.';
+import {
+    TooltipArrow,
+    TooltipContent,
+    TooltipPortal,
+    TooltipProvider,
+    TooltipRoot,
+} from 'reka-ui';
+import { tooltipArrowVariants, tooltipContentVariants } from '.';
 
-const props = defineProps<TooltipRootProps>();
-const emits = defineEmits<TooltipRootEmits>();
+export type TooltipVariant = 'danger' | 'default';
 
-const forwarded = useForwardPropsEmits(props, emits);
+type Props = {
+    as?: TooltipTriggerProps['as'];
+    class?: HTMLAttributes['class'];
+    type?: TooltipContentVariants['type'];
+    rounded?: TooltipContentVariants['rounded'];
+    position?: TooltipContentProps['side'];
+    tooltip?: string;
+    closeOnClick?: boolean;
+    disableTeleport?: boolean;
+};
+
+const props = defineProps<Props>();
 </script>
 
 <template>
-    <VTooltipProvider>
-        <TooltipRoot v-bind="forwarded">
-            <VTooltipTrigger as-child>
-                <slot name="trigger" />
-            </VTooltipTrigger>
-            <VTooltipContent>
-                <slot name="content" />
-            </VTooltipContent>
+    <TooltipProvider
+        :disable-closing-trigger="!closeOnClick"
+        :delay-duration="100"
+    >
+        <TooltipRoot>
+            <slot name="trigger">
+                <VTooltipTrigger
+                    :as="as"
+                    :type="!as || as === 'button' ? 'button' : undefined"
+                >
+                    <slot />
+                </VTooltipTrigger>
+            </slot>
+            <TooltipPortal :disabled="disableTeleport">
+                <TooltipContent
+                    v-bind="$attrs"
+                    :class="cn(tooltipContentVariants({ rounded, type }), props.class)"
+                >
+                    {{ tooltip }}
+                    <TooltipArrow
+                        v-bind="props"
+                        :class="cn(tooltipArrowVariants({ type }))"
+                    />
+                </TooltipContent>
+            </TooltipPortal>
         </TooltipRoot>
-    </VTooltipProvider>
+    </TooltipProvider>
 </template>

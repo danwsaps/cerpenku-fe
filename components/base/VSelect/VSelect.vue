@@ -1,6 +1,10 @@
 <script setup lang="ts" generic="TData extends  string | number">
 import type { HTMLAttributes } from 'vue';
-import type { InputColumnSpanVariants, InputColumnVariants, SelectButtonVariants } from '.';
+import type {
+    InputColumnSpanVariants,
+    InputColumnVariants,
+    SelectButtonVariants,
+} from '.';
 import { PopoverRoot } from 'reka-ui';
 import {
     inputColumnSpanVariants,
