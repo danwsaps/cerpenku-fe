@@ -1,5 +1,4 @@
 import type { RouteLocationRaw } from 'vue-router';
-import type { CONTENT_STATUS, SORT_DIRECTION } from '~/constants';
 
 export type ObjectValues<Type> = Type[keyof Type];
 export type ObjectKeys<Type> = keyof Type;

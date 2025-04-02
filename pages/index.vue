@@ -58,7 +58,7 @@ const handleSearch = () => {
             v-model:sort-key="params.sortBy"
             v-model:sort-direction="params.direction"
             v-model:page="params.page"
-            v-model:per-page="params.size"
+            v-model:per-page="params.limit"
             name="blog"
             title="Blog"
             :entries="results"

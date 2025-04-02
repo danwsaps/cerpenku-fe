@@ -1,5 +1,3 @@
-import type { ContentStatus } from '~/types';
-
 export type BlogListResponse = {
     id: number;
     title: string;

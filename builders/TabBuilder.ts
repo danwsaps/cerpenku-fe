@@ -1,5 +1,3 @@
-import type { Tab } from '~/types';
-
 export class TabBuilder<TKey extends string> {
     private tabs: Tab<TKey>[] = [];
 

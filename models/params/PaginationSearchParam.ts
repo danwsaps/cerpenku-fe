@@ -1,16 +1,12 @@
-import type { SortDirection, Undefined } from '~/types';
-
 export class PaginationSearchParam {
     sortBy!: Undefined<string>;
     direction!: Undefined<SortDirection>;
     page!: number;
-    size!: number;
     limit!: number;
 
     constructor() {
         Object.assign(this, {
             page: 1,
-            size: 10,
             limit: 10,
         });
     }
@@ -32,11 +28,6 @@ export class PaginationSearchParam {
 
     setFirstPage(): this {
         this.page = 1;
-        return this;
-    }
-
-    setSize(size: number): this {
-        this.size = size;
         return this;
     }
 

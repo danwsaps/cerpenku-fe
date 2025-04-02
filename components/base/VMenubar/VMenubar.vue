@@ -3,7 +3,6 @@ import type { MenubarRootEmits, MenubarRootProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import {
     MenubarRoot,
-
     useForwardPropsEmits,
 } from 'reka-ui';
 

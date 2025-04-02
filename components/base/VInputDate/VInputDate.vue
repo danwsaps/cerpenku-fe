@@ -9,7 +9,6 @@ import type {
 import VueDatePicker from '@vuepic/vue-datepicker';
 import { useForwardProps } from 'reka-ui';
 import { useField } from 'vee-validate';
-import { computed, toRef, watch } from 'vue';
 import {
     inputColumnSpanVariants,
     inputColumnVariants,
@@ -18,7 +17,6 @@ import {
     inputPrefixVariant,
     inputSuffixVariant,
 } from '.';
-import VSkeleton from '../VSkeleton/VSkeleton.vue';
 
 type Props = VueDatePickerProps & {
     class?: HTMLAttributes['class'];
