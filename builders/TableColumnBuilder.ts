@@ -1,4 +1,4 @@
-import type { TableColumn } from '~/components/base/VTable';
+import type { TableColumn } from '~/types';
 
 export class TableColumnBuilder<TData extends object> {
     private columns: TableColumn<TData>[] = [];

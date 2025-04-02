@@ -15,7 +15,8 @@
         "lint:fix": "eslint . --fix",
         "commit": "cz",
         "prepare": "husky",
-        "typecheck": "pnpm dlx nuxi typecheck"
+        "typecheck": "pnpm dlx nuxi typecheck",
+        "db": "pnpm dlx json-server db.json"
     },
     "dependencies": {
         "@vee-validate/nuxt": "^4.15.0",
@@ -56,6 +57,7 @@
         "eslint": "^9.22.0",
         "eslint-plugin-format": "^1.0.1",
         "husky": "^9.1.7",
+        "json-server": "1.0.0-beta.3",
         "lint-staged": "^15.5.0",
         "motion-v": "^0.13.1",
         "pinia-plugin-persistedstate": "^4.2.0",
