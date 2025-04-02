@@ -1,8 +1,5 @@
 <script setup lang="ts" generic="TData extends object">
 import type { HTMLAttributes } from 'vue';
-import type { SortDirection } from '~/types';
-import type { TableColumn, TableRowSelection } from '~/types/TableType';
-import { SORT_DIRECTION } from '~/constants';
 import {
     tableCellVariants,
     tableColumnVariants,

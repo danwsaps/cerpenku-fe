@@ -37,6 +37,18 @@ export default defineNuxtConfig({
         },
     },
 
+    imports: {
+        dirs: [
+            'composables/**',
+            'models/**',
+            'types/**',
+            'services/**',
+            'endpoints/**',
+            'builders/**',
+            'constants/**',
+        ],
+    },
+
     nitro: {
         compressPublicAssets: true,
     },
