@@ -1,8 +1,3 @@
-import {
-    v4,
-    v7,
-} from 'uuid';
-
 /**
  * @description Checks if the given value is an array.
  */
@@ -96,12 +91,12 @@ export const numberOrZero = (value?: number | null) => isNumber(value) ? value :
 /**
  * @description Generate UUID V4
  */
-export const UUIDV4 = () => v4();
+export const UUIDV4 = () => useNuxtApp().$id.v4();
 
 /**
  * @description Generate UUID V7
  */
-export const UUIDV7 = () => v7();
+export const UUIDV7 = () => useNuxtApp().$id.v7();
 
 /**
  * @description Maps a paginated response of type T to type U using the provided mapper function.

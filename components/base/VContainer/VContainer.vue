@@ -2,9 +2,7 @@
 import type { HTMLAttributes } from 'vue';
 
 type Props = {
-    as?:
-        HTMLElementTagNameMap['div']
-        | HTMLElementTagNameMap['section'];
+    as?: HTMLElementTagNameMap['div'] | HTMLElementTagNameMap['section'];
     class?: HTMLAttributes['class'];
 };
 const {

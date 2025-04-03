@@ -1,5 +1,3 @@
-import { Endpoint } from './Endpoint';
-
 export class BlogEndpoint {
     static {
         Endpoint.setEndpoint({
