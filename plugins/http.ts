@@ -3,8 +3,13 @@ import { toast } from 'vue-sonner';
 export default defineNuxtPlugin((nuxtApp) => {
     const http = $fetch.create({
         onRequest({ options }) {
+            useNuxtApp().$progress.start();
             options.headers.set('Content-Type', 'application/json');
             options.headers.set('Authorization', `Bearer ...`);
+        },
+
+        onResponse() {
+            useNuxtApp().$progress.done();
         },
 
         async onRequestError({ request }) {
