@@ -1,6 +1,8 @@
 export default defineNuxtRouteMiddleware(() => {
-    useNuxtApp().$progress.start();
-    nextTick(() => {
-        useNuxtApp().$progress.done();
-    });
+    if (import.meta.client) {
+        useNuxtApp().$progress.start();
+        nextTick(() => {
+            useNuxtApp().$progress.done();
+        });
+    }
 });
